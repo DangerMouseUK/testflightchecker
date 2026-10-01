@@ -1,0 +1,12 @@
+// Mock config for tests
+export const INVITE_URLS = ['https://testflight.apple.com/join/ABCDEFGH'];
+export const ALERT_SENDER = 'test@example.com';
+export const ALERT_RECIPIENT = 'test@example.com';
+export const RESEND_API_KEY = 'test_api_key';
+export const TELEGRAM_BOT_TOKEN = 'test_bot_token';
+export const TELEGRAM_CHAT_ID = 'test_chat_id';
+export const POLL_INTERVAL_MS = 60000;
+export const POLL_JITTER_PERCENTAGE = 10;
+export const REQUEST_TIMEOUT_MS = 15000;
+export const EMAIL_ENABLED = true;
+export const TELEGRAM_ENABLED = true;

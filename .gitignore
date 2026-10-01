@@ -1,0 +1,30 @@
+# Private environment and credentials
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+
+# Dependencies, generated output, and caches
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.npm/
+*.tsbuildinfo
+*.tgz
+
+# Runtime data and diagnostic reports
+logs/
+*.log
+*.pid
+report.*.json
+
+# Local editor and OS files
+.vscode/
+.idea/
+*.sw?
+.DS_Store
+Thumbs.db

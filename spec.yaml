@@ -1,0 +1,23 @@
+name: testflightchecker
+services:
+  - name: watcher
+    dockerfile_path: Dockerfile
+    source_dir: /
+    instance_count: 1
+    http_port: 8080
+    health_check:
+      http_path: /healthz
+    envs:
+      - key: INVITE_URLS
+        value: "https://testflight.apple.com/join/ABCDEFGH" # Replace before deployment.
+      - key: POLL_INTERVAL_MS
+        value: "60000"
+      - key: POLL_JITTER_PERCENTAGE
+        value: "10"
+      - key: NODE_ENV
+        value: "production"
+      - key: PORT
+        value: "8080"
+    # Add optional notification settings in the hosting dashboard as secrets.
+    # Email: RESEND_API_KEY, ALERT_SENDER, ALERT_RECIPIENT (all three).
+    # Telegram: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID (both).
